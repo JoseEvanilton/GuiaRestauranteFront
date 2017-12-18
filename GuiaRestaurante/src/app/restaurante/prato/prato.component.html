@@ -1,0 +1,39 @@
+
+<div class="container">   
+  <br>
+  <form>
+    <div class="input-field">
+        <i class="material-icons prefix">search</i>
+      <input #textoProcurado (keyup)="0" class="form-control form-control-lg" id="search" type="text"  placeholder="Pesquisar">
+      <label class="label-icon" for="search"></label>
+      <!-- <i class="material-icons">close</i> -->
+    </div>
+  </form>
+<br><br>
+        <table class="striped">
+            <thead>
+              <tr>
+                  <th>Nome</th>
+                  <th>Preço</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let rest of pratos| pesquisa: textoProcurado.value">
+                  <td>{{rest.nome}}</td>
+                  <td>{{rest.preco}}</td>
+                  
+        <td><button type="submit" (click)="editar(rest)" class="material-icons indigo accent-4" title="Editar">edit</button></td>
+        <td><button type="submit" (click)="deletar(rest)" class="material-icons red accent-4" title="Deletar">delete</button></td>
+       
+        
+                </tr> 
+              </tbody>
+            </table>
+
+  <div class="fixed-action-btn horizontal">
+      <a class="btn-floating btn-large red" (click)="cadastrar(rest)">
+        <i class="large material-icons">add</i>
+      </a>
+    </div>
+  
+  </div>

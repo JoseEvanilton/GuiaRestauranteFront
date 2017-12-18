@@ -1,0 +1,39 @@
+<p><b>Cadastrar Restaurante:</b></p>
+<div class="row">
+    <form class="col s12" #f="ngForm" (ngSubmit)="List(f)">
+      <div class="row">
+        <div class="input-field col s6">
+            <i class="material-icons prefix">restaurant</i>
+          <input type="text" class="validate" name="nome" ngModel >
+          <label class="active">Restaurante</label>         
+        </div>
+        <div class="input-field col s6">
+            <i class="material-icons prefix">phone</i>
+          <input type="number" class="validate" name="telefone" ngModel>
+          <label class="active">Telefone</label>         
+        </div>
+      </div>
+      <div class="row">
+          <div class="input-field col s6">
+              <i class="material-icons prefix">movie</i>
+            <input type="text" class="validate" name="bairro" ngModel>
+            <label class="active">Bairro</label>
+          </div>
+      <div class="row">
+        <div class="input-field col s6">
+            <i class="material-icons prefix">shuffle</i>
+          <input type="text" class="validate" name="rua" ngModel>
+          <label class="active">Rua</label>
+        </div>
+      </div>
+      <div class="input-field col s2">
+          <i class="material-icons prefix">filter_9</i>
+        <input type="number" class="validate" name="numero" ngModel>
+        <label class="active">Número</label>
+      </div>
+      </div>
+      <div class="fixed-action-btn horizontal">
+        <button type="submit" class="btn-floating btn-large greem" ><i class="large material-icons" title="Atualizar">save</i></button>
+      </div>
+    </form>
+  </div>

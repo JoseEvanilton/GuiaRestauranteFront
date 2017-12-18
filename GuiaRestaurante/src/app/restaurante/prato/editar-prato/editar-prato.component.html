@@ -1,0 +1,21 @@
+<p><b>Cadastrar Prato:</b></p>
+<div class="row">
+    <form class="col s12" #f="ngForm" (ngSubmit)="List(f)">
+      <div class="row">
+        <div class="input-field col s6">
+            <i class="material-icons prefix">restaurant</i>
+            <input type="text" class="validate" name="nome" [(ngModel)]="restaurante.pratos.nome"  >
+            <input type="text" class="validate" name="restaurante" [(ngModel)]="restaurante.pratos.pratoId" >
+          <label class="active">Nome</label>         
+        </div>
+        <div class="input-field col s6">
+            <i class="material-icons prefix">money_off</i>
+          <input type="text" class="validate" name="preco" [(ngModel)]="restaurante.pratos.preco" >
+          <label class="active">Preço</label>         
+        </div>
+      </div>
+      <div class="fixed-action-btn horizontal">
+        <button type="submit" class="btn-floating btn-large greem" ><i class="large material-icons" title="Atualizar">save</i></button>
+      </div>
+    </form>
+  </div>
