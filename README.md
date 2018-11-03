@@ -1,5 +1,5 @@
 # GuiaRestauranteFront
-AngularJS
+Angular
 
 É necessário  ter 
 NodeJS
